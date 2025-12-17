@@ -33,7 +33,7 @@ def crop_square_and_downsample(img, downsize_size=(g.IMG_SIZE, g.IMG_SIZE)):
     right = left + new_size
     bottom = top + new_size
     img = img.crop(box=(left, top, right, bottom))
-    img.thumbnail(downsize_size, Image.ANTIALIAS)
+    img.thumbnail(downsize_size, Image.LANCZOS)
     return img
 
 
